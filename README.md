@@ -37,14 +37,14 @@ This call will generate an svg image with a graph representing the model we just
 The image below shows a comparison between the graph obtained using keras built in visualization utility (https://keras.io/visualization) on the left, and the result using our function, on the right, for the model defined in the previous example:
 
 <p align="center">
- <img src="./builtin_model.png">
- <img src="./my_model.png">
+ <img src="./imgs/builtin_model.png">
+ <img src="./imgs/my_model.png">
 </p>
 
 If the display_params flag was set to True in the previous example the result would look like:
 
 <p align="center">
- <img src="./my_model_params.png">
+ <img src="./imgs/my_model_params.png">
 </p>
 
 ## Authors
