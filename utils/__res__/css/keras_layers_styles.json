@@ -1,0 +1,853 @@
+{
+"globals":
+    {
+        "rounded_box_font_size": "20px",
+        "rounded_box_border_size": 7,
+        "rounded_box_border_radius": 20,
+        "wrapper_radius": 20,
+        "wrapper_font_size": "50px",
+        "wrapper_stroke_width": 5,
+        "arrow_width": "4px",
+        "arrow_height": 10,
+        "arrow_fill": "#000000ff",
+        "font_tag": 
+        {
+            "name": "UbuntuMono-R.ttf",
+            "font_size": "30px"
+        },
+        "font_params": 
+        {
+            "name": "UbuntuMono-L.ttf",
+            "font_size": "20px"
+        }
+    },
+"layers":    
+    {"InputLayer": 
+      {
+        "tag": "lambda x: 'Input: ' + x.name",
+        "kind": "rounded_box",
+        "background_color": "#acacace2",
+        "border_color": "#4d4d4da9",
+        "font_color": "#ffffffff",
+        "parameters":{}
+      },
+    "OutputLayer": 
+      {
+        "tag": "Output",
+        "kind": "rounded_box",
+        "background_color": "#acacace2",
+        "border_color": "#4d4d4da9",
+        "font_color": "#ffffffff",
+        "parameters":{}
+      },
+    "Conv1D":
+      {
+        "tag": "Conv1D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel.shape.as_list()'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "Conv2D":
+      {
+        "tag": "Conv2D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel.shape.as_list()'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "Conv3D":
+      {
+        "tag": "Conv3D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel.shape.as_list()'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "Conv2DTranspose":
+      {
+        "tag": "Conv2DTranspose",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel.shape.as_list()'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "Conv3DTranspose":
+      {
+        "tag": "Conv3DTranspose",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel.shape.as_list()'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "SeparableConv1D":
+      {
+        "tag": "SeparableConv1D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel_size'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "SeparableConv2D":
+      {
+        "tag": "SeparableConv2D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel_size'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "LocallyConnected1D":
+      {
+        "tag": "LocallyConnected1D",
+        "kind": "rounded_box",
+        "background_color": "#ffaaeeff",
+        "border_color": "#d400aaff",
+        "font_color": "#000000ff",
+        "parameters":
+        {
+          "activation": "'lambda x: x.activation.__name__'",
+          "kernel_size": "'lambda x: x.kernel_size'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "LocallyConnected2D":
+      {
+        "tag": "LocallyConnected2D",
+        "kind": "rounded_box",
+        "background_color": "#ffaaeeff",
+        "border_color": "#d400aaff",
+        "font_color": "#000000ff",
+        "parameters":
+        {
+          "activation": "lambda x: x.activation.__name__'",
+          "kernel_size": "lambda x: x.kernel_size'",
+          "padding": "'lambda x: x.padding'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "Cropping1D":
+      {
+        "tag": "Cropping1D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "cropping": "'lambda x: x.cropping'"
+        }
+      }, 
+    "Cropping2D":
+      {
+        "tag": "Cropping2D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "cropping": "'lambda x: x.cropping'"
+        }
+      }, 
+    "Cropping3D":
+      {
+        "tag": "Cropping3D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "cropping": "'lambda x: x.cropping'"
+        }
+      },
+    "UpSampling1D":
+      {
+        "tag": "UpSampling1D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "size": "'lambda x: x.size'"
+        }
+      },
+    "UpSampling2D":
+      {
+        "tag": "UpSampling2D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "size": "'lambda x: x.size'"
+        }
+      },
+    "UpSampling3D":
+      {
+        "tag": "UpSampling3D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "size": "'lambda x: x.size'"
+        }
+      },
+    "ZeroPadding1D":
+      {
+        "tag": "ZeroPadding1D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "padding": "'lambda x: x.padding'"
+        }
+      },
+    "ZeroPadding2D":
+      {
+        "tag": "ZeroPadding2D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "padding": "'lambda x: x.padding'"
+        }
+      },
+    "ZeroPadding3D":
+      {
+        "tag": "ZeroPadding3D",
+        "kind": "rounded_box",
+        "background_color": "#2a7fffff",
+        "border_color": "#5151c0ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "padding": "'lambda x: x.padding'"
+        }
+      },
+    "MaxPooling1D":
+      {
+        "tag": "MaxPooling1D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "MaxPooling2D":
+      {
+        "tag": "MaxPool2D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "MaxPooling3D":
+      {
+        "tag": "MaxPool3D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "AveragePooling1D":
+      {
+        "tag": "AvgPool1D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "AveragePooling2D":
+      {
+        "tag": "AvgPool2D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "AveragePooling3D":
+      {
+        "tag": "AvgPool3D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "GlobalAveragePooling1D":
+      {
+        "tag": "GlobalAvgPool1D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "GlobalAveragePooling2D":
+      {
+        "tag": "GlobalAvgPool2D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "GlobalAveragePooling3D":
+      {
+        "tag": "GlobalAvgPool3D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "GlobalMaxPooling1D":
+      {
+        "tag": "GlobalMaxPool1D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "GlobalMaxPooling2D":
+      {
+        "tag": "GlobalMaxPool2D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "GlobalMaxPooling3D":
+      {
+        "tag": "GlobalMaxPool3D",
+        "kind": "rounded_box",
+        "background_color": "#d3605bff",
+        "border_color": "#9c3030ff",
+        "font_color": "#ffffffff",
+        "parameters":
+        {
+          "pool_size": "'lambda x: x.pool_size'",
+          "strides": "'lambda x: x.strides'"
+        }
+      },
+    "BatchNormalization":
+      {
+        "tag": "BNorm",
+        "kind": "rounded_box",
+        "background_color": "#f6f65bff",
+        "border_color": "#b7b700ab",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Activation":
+      {
+        "tag": "lambda x: 'ReLU' if x.activation.__name__ == 'relu' else 'eLU' if x.activation.__name__ == 'elu' else 'Softmax' if x.activation.__name__ == 'softmax' else 'Softplus' if x.activation.__name__ == 'softplus' else 'Softsign' if x.activation.__name__ == 'softsign' else 'tanH' if x.activation.__name__ == 'tanh' else 'Sigmoid' if x.activation.__name__ == 'sigmoid' else 'hard Sigmoid' if x.activation.__name__ == 'hard_sigmoid' else 'linear' if x.activation.__name__ == 'linear' else x.activation.__name__",
+        "background_color": "#bcfebcff",
+        "kind": "rounded_box",
+        "border_color": "#0fb40fa8",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "LeakyReLU":
+      {
+        "tag": "LeakyReLU",
+        "kind": "rounded_box",
+        "background_color": "#bcfebcff",
+        "border_color": "#0fb40fa8",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "\u03b1": "'lambda x: x.alpha'"
+        }
+      },
+    "ELU":
+      {
+        "tag": "ELU",
+        "kind": "rounded_box",
+        "background_color": "#bcfebcff",
+        "border_color": "#0fb40fa8",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "\u03b1": "'lambda x: x.alpha'"
+        }
+      },
+    "PReLU":
+      {
+        "tag": "PReLU",
+        "kind": "rounded_box",
+        "background_color": "#bcfebcff",
+        "border_color": "#0fb40fa8",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Softmax":
+      {
+        "tag": "Softmax",
+        "kind": "rounded_box",
+        "background_color": "#bcfebcff",
+        "border_color": "#0fb40fa8",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "ThresholdedReLU":
+      {
+        "tag": "ThresholdedReLU",
+        "kind": "rounded_box",
+        "background_color": "#bcfebcff",
+        "border_color": "#0fb40fa8",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "\u03b8": "'lambda x: x.theta'"
+        }
+      },
+    "Flatten":
+      {
+        "tag": "Flatten",
+        "kind": "rounded_box",
+        "background_color": "#c6afe9e3",
+        "border_color": "#975deeff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Dense":
+      {
+        "tag": "Dense",
+        "kind": "rounded_box",
+        "background_color": "#e47ca6e3",
+        "border_color": "#aa114ee3",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "units": "'lambda x: x.units'"
+        }
+      },
+    "Reshape":
+      {
+        "tag": "Reshape",
+        "kind": "rounded_box",
+        "background_color": "#cd8a63e2",
+        "border_color": "#a47a4aff",
+        "font_color": "#ffffffff",
+        "parameters": {}
+      },
+    "Permute":
+      {
+        "tag": "Permute",
+        "kind": "rounded_box",
+        "background_color": "#cd8a63e2",
+        "border_color": "#a47a4aff",
+        "font_color": "#ffffffff",
+        "parameters": {}
+      },
+    "RepeatVector":
+      {
+        "tag": "RepeatVector",
+        "kind": "rounded_box",
+        "background_color": "#cd8a63e2",
+        "border_color": "#a47a4aff",
+        "font_color": "#ffffffff",
+        "parameters": {}
+      },
+    "Lambda":
+      {
+        "tag": "Lambda",
+        "kind": "rounded_box",
+        "background_color": "#ffb380ff",
+        "border_color": "#ff6600ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "\u03bb": "'lambda x: function2str(x.function)'"
+        }
+      },
+    "ActivityRegularization":
+      {
+        "tag": "ActReg",
+        "kind": "rounded_box",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Masking":
+      {
+        "tag": "Masking",
+        "kind": "rounded_box",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "mask": "'lambda x: x.mask_value'"
+        }
+      },
+    "Concatenate":
+      {
+        "tag": "⌒",
+        "kind": "circle",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Merge":
+      {
+        "tag": "+",
+        "kind": "circle",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Add":
+      {
+        "tag": "+",
+        "kind": "circle",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Subtract":
+      {
+        "tag": "-",
+        "kind": "circle",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Multiply":
+      {
+        "tag": "*",
+        "kind": "circle",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Average":
+      {
+        "tag": "~",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Maximum":
+      {
+        "tag": "⋁",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Dot":
+      {
+        "tag": "×",
+        "background_color": "#ffffffff",
+        "border_color": "#000000ff",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "Dropout":
+      {
+        "tag": "Dropout",
+        "kind": "rounded_box",
+        "background_color": "#00ffffff",
+        "border_color": "#006680ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "rate": "'lambda x: x.rate'"
+        }
+      },
+    "SpatialDropout1D":
+      {
+        "tag": "SpatialDropout1D",
+        "kind": "rounded_box",
+        "background_color": "#00ffffff",
+        "border_color": "#006680ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "rate": "'lambda x: x.rate'"
+        }
+      },
+    "SpatialDropout2D":
+      {
+        "tag": "SpatialDropout2D",
+        "kind": "rounded_box",
+        "background_color": "#00ffffff",
+        "border_color": "#006680ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "rate": "'lambda x: x.rate'"
+        }
+      },
+    "SpatialDropout3D":
+      {
+        "tag": "SpatialDropout3D",
+        "kind": "rounded_box",
+        "background_color": "#00ffffff",
+        "border_color": "#006680ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "rate": "'lambda x: x.rate'"
+        }
+      },
+    "RNN":
+      {
+        "tag": "RNN",
+        "kind": "rounded_box",
+        "background_color": "#eeffaaff",
+        "border_color": "#aad400ab",
+        "font_color": "#000000ff",
+        "parameters": {}
+      },
+    "SimpleRNN":
+      {
+        "tag": "SimpleRNN",
+        "kind": "rounded_box",
+        "background_color": "#eeffaaff",
+        "border_color": "#aad400ab",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "units": "'lambda x: x.units'"
+        }
+      },
+    "GRU":
+      {
+        "tag": "GRU",
+        "kind": "rounded_box",
+        "background_color": "#eeffaaff",
+        "border_color": "#aad400ab",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "units": "'lambda x: x.units'"
+        }
+      },
+    "CuDNNLSTM":
+      {
+        "tag": "CuDNNLSTM",
+        "kind": "rounded_box",
+        "background_color": "#eeffaaff",
+        "border_color": "#aad400ab",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "units": "'lambda x: x.units'"
+        }
+      },
+    "LSTM":
+      {
+        "tag": "LSTM",
+        "kind": "rounded_box",
+        "background_color": "#eeffaaff",
+        "border_color": "#aad400ab",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "units": "'lambda x: x.units'"
+        }
+      },
+    "ConvLSTM2D":
+      {
+        "tag": "ConvLSTM2D",
+        "kind": "rounded_box",
+        "background_color": "#eeffaaff",
+        "border_color": "#aad400ab",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "kernel": "'lambda x: x.kernel_size'",
+          "strides": "'lambda x: x.strides'"
+
+        }
+      },
+    "Embedding":
+      {
+        "tag": "Embedding",
+        "kind": "rounded_box",
+        "background_color": "#afafe9e3",
+        "border_color": "#3737c8ff",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "input_dim": "'lambda x: x.input_dim'",
+          "output_dim": "'lambda x: x.output_dim'",
+          "input_length": "'lambda x: x.input_length'"
+        }
+      },
+    "GaussianNoise":
+      {
+        "tag": "GaussianNoise",
+        "kind": "rounded_box",
+        "background_color": "#e9c6afff",
+        "border_color": "#784421a8",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "\u03c3": "'lambda x: x.stddev'"
+        }
+      },
+    "GaussianDropout":
+      {
+        "tag": "GaussianDropout",
+        "kind": "rounded_box",
+        "background_color": "#e9c6afff",
+        "border_color": "#784421a8",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "rate": "'lambda x: x.rate'"
+        }
+      },
+    "AlphaDropout":
+      {
+        "tag": "AlphaDropout",
+        "kind": "rounded_box",
+        "background_color": "#e9c6afff",
+        "border_color": "#784421a8",
+        "font_color": "#000000ff",
+        "parameters": 
+        {
+          "rate": "'lambda x: x.rate'",
+          "noise_shape": "'lambda x: x.noise_shape'"
+        }
+      },
+    "Common":
+      {
+        "tag": "'lambda x: x.layer.__kind__'",
+        "kind": "rounded_box",
+        "background_color": "#e9c6afff",
+        "border_color": "#005444a9",
+        "font_color": "#0000004f",
+        "parameters": {}
+      }
+    },
+"wrappers":
+    {
+        "ConcreteDropout":
+        {
+            "tag": "π",
+            "background_color": "#ffffffff",
+            "border_color": "#000000ff"
+        }
+    }
+}
