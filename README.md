@@ -133,5 +133,5 @@ Notice that these layers are created using the Activation layer and specifying t
 
 ## CODE DEMO
 
-A DEMO of this usage and the code can be found in jupyter notebook "Plot_Deep_Nets_DEMO.ipynb".
+A DEMO of this usage and the code can be found in jupyter notebook "DEMO_CODE.ipynb".
 
